@@ -1,0 +1,79 @@
+{
+  "name": "myproject",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "1": "上面三个是原始的,启动命令用 yarn run dev",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "serve:dev": "vue-cli-service serve --mode dev",
+    "build:prod": "vue-cli-service serve --mode prod",
+    "build:test": "vue-cli-service serve --mode test"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@element-plus/icons-vue": "^2.0.6",
+    "@liveqing/liveplayer-v3": "^3.7.37",
+    "ant-design-vue": "^4.2.1",
+    "axios": "^0.27.2",
+    "codemirror": "^6.0.2",
+    "codemirror-editor-vue3": "^2.8.0",
+    "copy-webpack-plugin": "^6.4.0",
+    "core-js": "3.8.3",
+    "dayjs": "1.10.5",
+    "echarts": "^5.5.1",
+    "element-plus": "^2.2.9",
+    "jsencrypt": "^3.3.2",
+    "ol": "6.14.1",
+    "pinia": "2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
+    "qrcodejs2-fix": "^0.0.1",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vue-seamless-scroll": "^1.1.23",
+    "vuex": "^4.0.0-0",
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-plugin-eslint": "~4.5.15",
+    "@vue/cli-plugin-router": "~4.5.15",
+    "@vue/cli-plugin-vuex": "~4.5.15",
+    "@vue/cli-service": "~4.5.15",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^3.2.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "less": "^4.1.3",
+    "less-loader": "^7.3.0",
+    "style-loader": "^1.0.0"
+  },
+  "resolutions": {
+    "minimatch": "^3.1.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "@vue/standard"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

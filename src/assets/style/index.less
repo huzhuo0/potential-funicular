@@ -1,0 +1,281 @@
+@import "./mixin.less"; /* 要引入混入的东西 */
+* {
+  cursor: url("../mouceIcon.png"), default; /* 鼠标样式设置 */
+  margin: 0;
+  padding: 0;
+  /* 全局滚动条设置 */
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+    // background-color: #f6f6f6;
+  }
+  /* scroll轨道背景 */
+  &::-webkit-scrollbar-track {
+    /* shadow: inset 0 0 6px rgba(0,0,0,0.3);   */
+    border-radius: 10px;
+    // background-color: #e9edf1;
+  }
+  /* 滚动条中能上下移动的小块 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    /* shadow: inset 0 0 6px rgba(0,0,0,.3);   */
+    background-color: #cdcdcd;
+    // #cdcdcd #f6f6f6
+  }
+}
+.pointer {
+  cursor: url("../img/mousepoint.png") 20 5, pointer !important;
+  position: relative;
+  right: 5px;
+}
+
+@font-face {
+  font-family: "旁门正道标题体";
+  src: url("../font/庞门正道标题体.ttf");
+}
+
+@font-face {
+  font-family: "优设标题黑";
+  src: url("../font/优设标题黑.ttf");
+}
+
+@font-face {
+  font-family: "Digital-7Mono";
+  src: url("../font/Digital-7Mono.TTF");
+}
+
+@font-face {
+  font-family: "DigitsDB-Normal";
+  src: url("../font/DigitsDB-Normal.ttf");
+}
+
+@font-face {
+  font-family: "DIN-BoldItalicAlt";
+  src: url("../font/DIN-BoldItalicAlt.otf");
+}
+@font-face {
+  font-family: "DIN-Light";
+  src: url("../font/DIN-Light.otf");
+}
+@font-face {
+  font-family: "DIN-Medium";
+  src: url("../font/DIN-Medium.otf");
+}
+
+@font-face {
+  font-family: "DIN-Regular";
+  src: url("../font/DIN-Regular.otf");
+}
+@font-face {
+  font-family: "DINEngschrift-Alternate";
+  src: url("../font/DINEngschrift-Alternate.otf");
+}
+@font-face {
+  font-family: "DS-Digital-Bold-Italic";
+  src: url("../font/DS-Digital-Bold-Italic.ttf");
+}
+@font-face {
+  font-family: "FZZZHONGJ";
+  src: url("../font/FZZZHONGJ.OTF");
+}
+@font-face {
+  font-family: "YouSheBiaoTiHei";
+  src: url("../font/YouSheBiaoTiHei.ttf");
+}
+@font-face {
+  font-family: "D-DIN";
+  src: url("../font/D-DIN.ttf");
+}
+@font-face {
+  font-family: "D-DIN-Bold";
+  src: url("../font/D-DIN-Bold.otf");
+}
+
+.font1 {
+  font-size: 25px;
+  font-family: "旁门正道标题体";
+}
+.font2 {
+  font-size: 25px;
+  font-family: "优设标题黑";
+}
+.font3 {
+  font-size: 25px;
+  font-family: "Digital-7Mono";
+}
+.font4 {
+  font-size: 25px;
+  font-family: "DigitsDB-Normal";
+}
+.font5 {
+  font-size: 25px;
+  font-family: "DIN-BoldItalicAlt";
+}
+.font6 {
+  font-size: 25px;
+  font-family: "DIN-Light";
+}
+.font7 {
+  font-size: 25px;
+  font-family: "DIN-Medium";
+}
+.font8 {
+  font-size: 25px;
+  font-family: "DIN-Regular";
+}
+.font9 {
+  font-size: 25px;
+  font-family: "DINEngschrift-Alternate";
+}
+.font10 {
+  font-size: 25px;
+  font-family: "DS-Digital-Bold-Italic";
+}
+.font11 {
+  font-size: 25px;
+  font-family: "FZZZHONGJ";
+}
+.font12 {
+  font-size: 25px;
+  font-family: "YouSheBiaoTiHei";
+}
+.font13 {
+  font-size: 25px;
+  font-family: "D-DIN";
+}
+.font14 {
+  font-size: 25px;
+  font-family: "D-DIN-Bold";
+}
+
+// 动画是使元素从一种样式逐渐变化为另一种样式的效果。
+// 您可以改变任意多的样式任意多的次数。
+// 请用百分比来规定变化发生的时间，或用关键词 "from" 和 "to"，等同于 0% 和 100%。
+// 0% 是动画的开始，100% 是动画的完成。
+// 为了得到最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器
+@keyframes shanshuo {
+  0% {
+    background: url("../img/faguang.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background: url("../img/bufaguang.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.donghua1 {
+  width: 100px;
+  height: 100px;
+  // animation:shanshuo 3s ease; 动画简写
+  // animation-iteration-count: infinite;
+  animation-name: shanshuo; //动画名称
+  animation-duration: 0.2s; //动画持续时间
+  animation-timing-function: linear; //动画的速度曲线
+  animation-fill-mode: forwards; //d动画不播放是的样式
+  // animation-delay: 2s;//动画延迟播放时间
+  animation-iteration-count: infinite; //动画播放次数  n 表示n次  infinite 表示无限次
+  animation-direction: alternate; //动画在下一周期是否逆向播放  normal按正常播放  reverse 动画反向播放  alternate 奇数正向播放，偶数反向播放  alternate奇数反向播放，偶数正向播放
+  animation-play-state: running; //规定动画是否正在运行或暂停  running  paused
+}
+
+@keyframes iconMove {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 150px;
+  }
+}
+.iconMoveAnimation {
+  width: 50px;
+  height: 61px;
+  position: absolute;
+  .backgroundStyle("../img/turnrighticon.png");
+  animation: iconMove 2s linear infinite;
+}
+
+// .title{
+//   width:100%;
+//   margin:0 auto;
+//   text-align: center;
+//   font-size: 30px;
+//   font-weight: 900;
+//   // font-family: '旁门正道标题体';
+// }
+// .container {
+//   width: 100%;
+//   color: #000;
+//   font-size: 70px;
+//   font-weight: bold;
+//   height: 80px;
+//   position: relative;
+//   // background:red;
+//   .txt {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     left: 0;
+//     top: 0;
+//     background: #fff;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     mix-blend-mode: screen;
+//   }
+// }
+
+/* 全局表单form样式 */
+.addBtn {
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 8px;
+  background: rgba(56, 230, 111, 0.76);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  float: right;
+  margin-right: 20px;
+  // color: red;
+  &:hover {
+    box-shadow: 0 0 25px #00dd46 inset;
+    background: rgba(56, 230, 111, 0.76);
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+/* 添加过渡效果样式 slide-right */
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-right-enter-from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+/* 添加过渡效果样式 fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+// 添加过渡效果样式 scale
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s ease;
+}
+.scale-enter-from,
+.scale-leave-to {
+  transform: scale(0.8);
+  opacity: 0;
+}

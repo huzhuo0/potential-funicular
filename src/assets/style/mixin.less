@@ -1,0 +1,50 @@
+.wordcolor() {
+  color: red;
+}
+
+// 伪元素
+.weiyuansu(@width, @height) {
+  content: "";
+  display: block;
+  width: @width;
+  height: @height;
+  visibility: hidden;
+}
+
+.backgroundStyle(@url) {
+  background: url(@url);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.backgroundCoverStyle(@url) {
+  background: url(@url);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 
+scss 写法
+@mixin wordcolor {
+  color: red;
+}
+// 伪元素
+@mixin weiyuansu($width, $height) {
+  content: "";
+  display: block;
+  width: $width;
+  height: $height;
+  visibility: hidden;
+}
+
+@mixin backgroundStyle($url) {
+  background: url($url);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@mixin backgroundCoverStyle($url) {
+  background: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+*/
